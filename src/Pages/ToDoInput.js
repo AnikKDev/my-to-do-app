@@ -25,7 +25,7 @@ const ToDoInput = ({ setTitle, setDescription, title, description, todoList, set
             <form onSubmit={handleAddToDo} className="flex flex-col w-2/5">
                 <input value={title} onChange={titleHandler} type="text" placeholder="Title" className="input input-bordered w-full my-6" />
                 <textarea value={description} onChange={descriptionHandler} className="textarea textarea-bordered" placeholder="Description"></textarea>
-                <button type='submit' className="btn my-6">Button</button>
+                <button type='submit' className="btn my-6">ADD TASK</button>
             </form>
         </div>
     );
