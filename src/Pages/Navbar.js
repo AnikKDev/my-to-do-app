@@ -10,15 +10,15 @@ const Navbar = () => {
         signOut(auth);
     };
     return (
-        <div class="navbar bg-base-300 px-14">
-            <div class="flex-1 px-2 lg:flex-none">
-                <a class="text-2xl font-bold">TODO</a>
+        <div className="navbar bg-base-300 px-14">
+            <div className="flex-1 px-2 lg:flex-none">
+                <a className="text-2xl font-bold">TODO</a>
             </div>
-            <div class="flex justify-end flex-1 px-2">
-                <div class="flex items-stretch">
-                    <Link to="/home" class="btn btn-ghost rounded-btn">Home</Link>
-                    <Link to="/todo" class="btn btn-ghost rounded-btn">Todo</Link>
-                    {!user ? <Link to="/signin" class="btn btn-ghost rounded-btn">Sign in</Link> : <button onClick={logout} class="btn btn-ghost">SIGN OUT</button>}
+            <div className="flex justify-end flex-1 px-2">
+                <div className="flex items-stretch">
+                    <Link to="/home" className="btn btn-ghost rounded-btn">Home</Link>
+                    <Link to="/todo" className="btn btn-ghost rounded-btn">Todo</Link>
+                    {!user ? <Link to="/signin" className="btn btn-ghost rounded-btn">Sign in</Link> : <button onClick={logout} className="btn btn-ghost">SIGN OUT</button>}
 
                 </div>
             </div>

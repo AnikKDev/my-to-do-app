@@ -1,4 +1,5 @@
 import React from 'react';
+import toast from 'react-hot-toast';
 
 const ToDoList = ({ todoItem, deleteHandler, todoList, setTodoList }) => {
     // console.log(todoItem)
@@ -13,15 +14,16 @@ const ToDoList = ({ todoItem, deleteHandler, todoList, setTodoList }) => {
             }
             return item;
         }))
+        toast.success(`${!completed ? 'Successfully Done' : 'Redoing The Task'}`)
     };
     return (
-        <div class="card lg:max-w-lg  bg-base-100 border-2 shadow-xl">
-            <div class="card-body">
+        <div className="card lg:max-w-lg  bg-base-100 border-2 shadow-xl">
+            <div className="card-body">
                 <h2 class={`card-title ${completed ? 'line-through' : ''}`}>{title}</h2>
                 <p className={completed ? 'line-through' : ''}>{description}</p>
-                <div class="card-actions justify-between my-6">
-                    <button onClick={completeHandler} class="btn  btn-sm">Complete</button>
-                    <button onClick={() => deleteHandler(id)} class="btn  btn-sm">Delete</button>
+                <div className="card-actions justify-between my-6">
+                    <button onClick={completeHandler} className="btn  btn-sm">Complete</button>
+                    <button onClick={() => deleteHandler(id)} className="btn  btn-sm">Delete</button>
                 </div>
 
             </div>

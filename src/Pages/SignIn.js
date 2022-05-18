@@ -30,9 +30,9 @@ const SignIn = () => {
     }, [emailUser, googleUser, navigate, from]);
     return (
         <div className="items-center justify-center flex">
-            <div class="card w-96 bg-base-100 shadow-xl ">
-                <div class="card-body">
-                    <h2 class="card-title text-center">SIGN IN</h2>
+            <div className="card w-96 bg-base-100 shadow-xl ">
+                <div className="card-body">
+                    <h2 className="card-title text-center">SIGN IN</h2>
                     <form onSubmit={handleSubmit(onSubmit)}>
                         <input {...register("email", {
                             required: {
@@ -41,7 +41,7 @@ const SignIn = () => {
                             }
                         })}
                             type="email"
-                            placeholder="Email" class="input input-bordered w-full my-6" />
+                            placeholder="Email" className="input input-bordered w-full my-6" />
                         <label className="label">
                             {errors.email?.type === 'required' && <span className="label-text-alt text-red-500">{errors.email.message}</span>}
                         </label>
@@ -59,18 +59,18 @@ const SignIn = () => {
                                 }
                             })}
                             type="password"
-                            placeholder="Password" class="input input-bordered w-full my-6" />
+                            placeholder="Password" className="input input-bordered w-full my-6" />
 
                         <label className="label">
                             {errors.password?.type === 'required' && <span className="label-text-alt text-red-500">{errors.password.message}</span>}
                             {errors.password?.type === 'minLength' && <span className="label-text-alt text-red-500">{errors.password.message}</span>}
                         </label>
 
-                        <button type='submit' class="btn mt-6 w-full max-w-xs">SIGN IN</button>
+                        <button type='submit' className="btn mt-6 w-full max-w-xs">SIGN IN</button>
                         <p>Already have an account? <Link to="/signup"><span className="font-bold ">Sign Up</span></Link></p>
                     </form>
-                    <div class="divider">OR</div>
-                    <button onClick={() => signInWithGoogle()} type='submit' class="btn">SIGN IN WITH GOOGLE</button>
+                    <div className="divider">OR</div>
+                    <button onClick={() => signInWithGoogle()} type='submit' className="btn">SIGN IN WITH GOOGLE</button>
                 </div>
             </div>
         </div>

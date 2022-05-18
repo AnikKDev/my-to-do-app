@@ -23,9 +23,9 @@ const ToDoInput = ({ setTitle, setDescription, title, description, todoList, set
     return (
         <div className="flex items-center justify-center my-14">
             <form onSubmit={handleAddToDo} className="flex flex-col w-2/5">
-                <input value={title} onChange={titleHandler} type="text" placeholder="Title" class="input input-bordered w-full my-6" />
-                <textarea value={description} onChange={descriptionHandler} class="textarea textarea-bordered" placeholder="Description"></textarea>
-                <button type='submit' class="btn my-6">Button</button>
+                <input value={title} onChange={titleHandler} type="text" placeholder="Title" className="input input-bordered w-full my-6" />
+                <textarea value={description} onChange={descriptionHandler} className="textarea textarea-bordered" placeholder="Description"></textarea>
+                <button type='submit' className="btn my-6">Button</button>
             </form>
         </div>
     );

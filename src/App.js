@@ -7,6 +7,7 @@ import ToDo from '../src/Pages/ToDo';
 import SignIn from '../src/Pages/SignIn';
 import SignUp from '../src/Pages/SignUp';
 import RequireAuth from './Pages/Utilities/RequireAuth';
+import { Toaster } from 'react-hot-toast';
 
 function App() {
   return (
@@ -24,6 +25,10 @@ function App() {
         <Route path="/signup" element={<SignUp></SignUp>}></Route>
 
       </Routes>
+
+      <Toaster
+        position="top-center"
+      />
     </div>
   );
 }
